@@ -16,12 +16,12 @@ const Navbar = () => {
   return (
     <div className="navbar" id="navbar">
       <motion.div
-        className="navbar-content"
+        className="navbar-content shimmer"
         variants={navbarLoadVariant}
         initial="initial"
         animate="animate"
         transition={{
-          duration: 0.8,
+          duration: 1,
           ease: "easeOut",
         }}
       >

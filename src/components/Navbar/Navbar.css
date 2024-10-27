@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   width: 100%;
-  top: 0px;
+  top: 10px;
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -9,11 +9,11 @@
 
 .navbar-content {
   margin: 0 auto;
-  color: var(--grey-color);
+  color: var(--text-color);
   background-color: var(--background-color-2);
   border: 1px solid var(--secondary-color);
   border-radius: 30px;
-  padding: 15px 30px;
+  padding: 12.5px 30px;
 }
 .navbar-content .navbar-items {
   display: flex;
@@ -31,12 +31,12 @@
 }
 
 .navbar-items .navbar-item p:hover {
-  color: var(--text-color);
+  color: var(--grey-color);
   cursor: pointer;
 }
 
 .navbar-items .navbar-item .icon:hover {
-  color: var(--text-color);
+  color: var(--grey-color);
   cursor: pointer;
 }
 

@@ -4,7 +4,7 @@
   --background-color: #0a0a0a;
   --background-color-2: #191919;
   --text-color: #fdfdfd;
-  --grey-color: #d2d2d2;
+  --grey-color: #cdcdcd;
   --primary-color: #ff9900;
   --secondary-color: #454545;
 }
@@ -15,9 +15,78 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: var(--background-color);
+}
+
 body {
   width: 100%;
   height: 100%;
   overflow-y: auto;
   font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.primary-button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  transition: all 0.6s;
+}
+.primary-button:hover {
+  background-color: var(--background-color-2);
+  border: 1px solid var(--primary-color);
+}
+
+.secondary-button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid var(--secondary-color);
+  transition: all 0.6s;
+}
+.secondary-button:hover {
+  color: var(--grey-color);
+  border: 1px solid var(--primary-color);
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.shimmer::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(148, 147, 147, 0.1),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }

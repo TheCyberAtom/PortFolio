@@ -4,12 +4,27 @@ import PersonIcon from "@mui/icons-material/Person";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import { motion } from "framer-motion";
 import "./Navbar.css";
+
+const navbarLoadVariant = {
+  initial: { y: -100, opacity: 0 },
+  animate: { y: 50, opacity: 1 },
+};
 
 const Navbar = () => {
   return (
     <div className="navbar" id="navbar">
-      <div className="navbar-content">
+      <motion.div
+        className="navbar-content"
+        variants={navbarLoadVariant}
+        initial="initial"
+        animate="animate"
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+        }}
+      >
         <ul className="navbar-items">
           <li className="navbar-item">
             <HomeIcon className="icon" />
@@ -32,7 +47,7 @@ const Navbar = () => {
             <p>Contact</p>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 };

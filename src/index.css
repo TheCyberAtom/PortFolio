@@ -4,7 +4,7 @@
   --background-color: #0a0a0a;
   --background-color-2: #191919;
   --text-color: #fdfdfd;
-  --grey-color: #cdcdcd;
+  --grey-color: #b2b2b2;
   --primary-color: #ff9900;
   --secondary-color: #454545;
 }
@@ -22,6 +22,8 @@ html {
 body {
   width: 100%;
   height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
   overflow-y: auto;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);

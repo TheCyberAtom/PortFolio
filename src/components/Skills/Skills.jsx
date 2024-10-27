@@ -1,35 +1,45 @@
 import React from "react";
 import skillsData from "../../constants/skillConstant";
+import { motion } from "framer-motion";
 import "./skills.css";
+import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
     <div className="skills" id="skills">
       <div className="skills-content">
-        <div className="skills-content-title">
+        <motion.div
+          className="skills-content-title"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          //   viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
           <h2>My Tech Stack</h2>
-        </div>
-        <div className="skills-content-description">
+        </motion.div>
+        <motion.div
+          className="skills-content-description"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          //   viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
           <p>
             I'm proficient in a range of modern technologies that empower me to
             build highly functional solutions.
           </p>
-        </div>
-        <div className="skills-content-items">
+        </motion.div>
+        <motion.div
+          className="skills-content-items"
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          //   viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+        >
           {skillsData.map((item) => {
-            return (
-              <div className="skill-item" key={item.id}>
-                <div className="item-image">
-                  <img src={item.image} alt={item.name} />
-                </div>
-                <div className="item-title">
-                  <p>{item.name}</p>
-                  <span>{item.type}</span>
-                </div>
-              </div>
-            );
+            return <SkillCard item={item} key={item.id} />;
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -81,8 +81,43 @@
   margin-top: 10px;
 }
 
-.home-content-links .social-icon {
-  font-size: 2em;
+.home-content-links a {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon.github-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon.linkedin-icon {
+  width: 33px;
+  height: 33px;
+}
+
+.home-content-links::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -210%;
+  height: 1px;
+  width: 150px;
+  background-color: var(--primary-color);
+  opacity: 0.2;
+}
+.home-content-links::after {
+  content: "";
+  position: absolute;
+  top: 48%;
+  right: -206%;
+  height: 1px;
+  width: 150px;
+  background-color: var(--primary-color);
+  opacity: 0.2;
 }
 
 /* Grid Pattern Style */

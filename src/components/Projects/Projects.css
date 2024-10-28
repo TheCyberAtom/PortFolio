@@ -44,11 +44,6 @@
   padding: 25px;
   width: 100%;
   position: relative;
-  transition: transform 0.3s;
-}
-
-.project-item:hover {
-  transform: scale(1.01);
 }
 
 .project-image {

@@ -10,8 +10,10 @@ const ProjectCard = ({ item }) => {
       className="project-item"
       initial={{ opacity: 0, y: 75 }}
       whileInView={{ opacity: 1, y: 0 }}
-      //   viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      //   viewport={{ once: true }}
     >
       <div className="project-image">
         <img src={item.image} alt={item.name} />
@@ -24,7 +26,11 @@ const ProjectCard = ({ item }) => {
         <div className="project-stacks">
           <div className="stacks">
             {item.techStack.map((tech) => {
-              return <p className="tech-stack">{tech}</p>;
+              return (
+                <p key={tech} className="tech-stack">
+                  {tech}
+                </p>
+              );
             })}
           </div>
           <div className="project-btns">

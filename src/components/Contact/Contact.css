@@ -159,7 +159,11 @@
 }
 
 .send-btn .send-icon {
+  transition: all 0.5s;
   width: 18px;
+}
+.send-btn:hover .send-icon {
+  color: var(--primary-color);
 }
 
 .copyright {

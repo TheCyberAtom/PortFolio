@@ -27,6 +27,7 @@ body {
   overflow-y: auto;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -57,7 +58,6 @@ a {
   transition: all 0.6s;
 }
 .secondary-button:hover {
-  color: var(--grey-color);
   border: 1px solid var(--primary-color);
 }
 

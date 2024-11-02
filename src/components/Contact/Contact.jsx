@@ -13,7 +13,7 @@ const Contact = () => {
         className="contact-content"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 3, delay: 0.1, ease: "easeOut" }}
+        transition={{ duration: 2, delay: 0.1, ease: "easeOut" }}
       >
         <div className="grid-mask"></div>
         <motion.div

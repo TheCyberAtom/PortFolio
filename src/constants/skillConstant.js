@@ -42,12 +42,12 @@ const skills = [
   },
 
   // Styling and CSS Frameworks
-  {
-    id: 5,
-    name: "Tailwind CSS",
-    type: "CSS Framework",
-    image: TailwindIcon,
-  },
+  // {
+  //   id: 5,
+  //   name: "Tailwind CSS",
+  //   type: "CSS Framework",
+  //   image: TailwindIcon,
+  // },
 
   // Backend and Databases
   {

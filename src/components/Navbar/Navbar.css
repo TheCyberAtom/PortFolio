@@ -1,10 +1,8 @@
 .navbar {
-  position: fixed;
   width: 100%;
-  top: 10px;
-  z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-content {
@@ -13,7 +11,9 @@
   background-color: var(--background-color-2);
   border: 1px solid var(--secondary-color);
   border-radius: 30px;
-  padding: 12.5px 30px;
+  padding: 15px 30px;
+  position: fixed;
+  z-index: 10;
 }
 .navbar-content .navbar-items {
   display: flex;

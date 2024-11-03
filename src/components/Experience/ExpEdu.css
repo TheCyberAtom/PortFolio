@@ -14,8 +14,6 @@
 }
 
 .expedu-content-title {
-  font-size: 1.5em;
-  font-weight: 500;
   margin-bottom: 5px;
   text-align: center;
 }
@@ -45,12 +43,15 @@
 .expedu-sections .tab {
   width: 50%;
   margin: 0 auto;
-  font-size: 1.1rem;
-  font-weight: 500;
   padding: 6px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s;
+}
+
+.tab p {
+  font-size: var(--font-size-l);
+  font-weight: 500;
 }
 
 .tab.active {
@@ -95,20 +96,24 @@
   justify-content: space-between;
 }
 
+.experience-content .title h3 {
+  font-size: var(--font-size-l);
+}
+
 .experience-content span {
   color: var(--grey-color);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   margin-bottom: -2px;
 }
 
 .company p {
   color: var(--grey-color);
-  font-size: 14px;
+  font-size: var(--font-size-s);
 }
 
 .experience-content .role {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: var(--font-size-s);
 }
 
 /* Education Section */
@@ -144,18 +149,18 @@
 
 .education-content span {
   color: var(--grey-color);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   margin-bottom: -2px;
 }
 
-.education-content .title {
+.education-content .title h3 {
   margin-top: 5px;
-  font-size: 14px;
+  font-size: var(--font-size-l);
 }
 
 .degree p {
   color: var(--grey-color);
-  font-size: 14px;
+  font-size: var(--font-size-s);
 }
 
 /* Common Styles */

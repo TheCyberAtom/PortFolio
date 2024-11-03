@@ -2,3 +2,12 @@
   width: 100%;
   background-color: var(--background-color);
 }
+
+.section-title {
+  font-size: var(--font-size-xxxl);
+  font-weight: 550;
+}
+
+.section-desc {
+  font-size: var(--font-size-l);
+}

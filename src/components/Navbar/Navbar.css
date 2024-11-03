@@ -30,19 +30,23 @@
   gap: 5px;
 }
 
-.navbar-items .navbar-item p:hover {
+.navbar-item p {
+  font-size: var(--font-size-m);
+}
+
+.navbar-item p:hover {
   color: var(--grey-color);
   cursor: pointer;
 }
 
-.navbar-items .navbar-item .icon:hover {
+.navbar-item .icon:hover {
   color: var(--grey-color);
   cursor: pointer;
 }
 
 /* Hide text on mobile */
 @media (max-width: 768px) {
-  .navbar-items .navbar-item p {
+  .navbar-item p {
     display: none;
     transition: all 1s linear;
   }
@@ -50,7 +54,7 @@
 
 /* Hide icons on larger screens */
 @media (min-width: 769px) {
-  .navbar-items .navbar-item .icon {
+  .navbar-item .icon {
     display: none;
     transition: all 1s linear;
   }

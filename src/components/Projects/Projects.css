@@ -14,8 +14,6 @@
 }
 
 .projects-content-title {
-  font-size: 1.5em;
-  font-weight: 500;
   margin-bottom: 5px;
   text-align: center;
 }
@@ -75,12 +73,12 @@
 }
 
 .project-title h3 {
-  font-size: 1.5em;
+  font-size: var(--font-size-xxl);
   font-weight: 500;
 }
 
 .project-title p {
-  font-size: 14px;
+  font-size: var(--font-size-m);
   color: var(--grey-color);
   max-width: 90%;
 }
@@ -101,7 +99,7 @@
 }
 
 .tech-stack {
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   padding: 8px 10px;
   min-width: 100px;
   color: var(--grey-color);
@@ -133,7 +131,7 @@
 
 .code-icon,
 .live-icon {
-  font-size: 1.5em;
+  font-size: var(--font-size-xxl);
   transition: all 0.5s;
 }
 

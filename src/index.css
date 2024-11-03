@@ -7,6 +7,13 @@
   --grey-color: #b2b2b2;
   --primary-color: #ff9900;
   --secondary-color: #454545;
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 26px;
+  --font-size-xxxl: 48px;
 }
 
 * {
@@ -90,5 +97,31 @@ a {
   }
   100% {
     left: 100%;
+  }
+}
+
+/* ------------------------------- */
+/*        Responsive Design        */
+/* ------------------------------- */
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-xs: 12px;
+    --font-size-s: 14px;
+    --font-size-m: 16px;
+    --font-size-l: 18px;
+    --font-size-xl: 20px;
+    --font-size-xxl: 24px;
   }
 }

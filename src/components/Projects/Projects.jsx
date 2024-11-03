@@ -15,7 +15,7 @@ const Projects = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h1>Personal Projects</h1>
+          <h1 className="section-title">Personal Projects</h1>
         </motion.div>
         <motion.div
           className="projects-content-description"
@@ -24,7 +24,7 @@ const Projects = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p>Code-Powered Designs in Action</p>
+          <p className="section-desc">Code-Powered Designs in Action</p>
         </motion.div>
         <div className="projects-content-items">
           {projectsData.map((item) => {

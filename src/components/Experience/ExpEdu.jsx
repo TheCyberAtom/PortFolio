@@ -9,10 +9,10 @@ const ExpEdu = () => {
     <div className="expedu" id="expedu">
       <div className="expedu-content">
         <div className="expedu-content-title">
-          <h1>Experience</h1>
+          <h2 className="section-title">Experience</h2>
         </div>
         <div className="expedu-content-description">
-          <p>
+          <p className="section-desc">
             A glimpse into my academic and profesional experience, shaping my
             growth in the tech world.
           </p>

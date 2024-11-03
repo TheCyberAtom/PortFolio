@@ -15,7 +15,7 @@ const Skills = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <h2>My Tech Stack</h2>
+          <h2 className="section-title">My Tech Stack</h2>
         </motion.div>
         <motion.div
           className="skills-content-description"
@@ -24,7 +24,7 @@ const Skills = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <p>
+          <p className="section-desc">
             I'm proficient in a range of modern technologies that empower me to
             build highly functional solutions.
           </p>

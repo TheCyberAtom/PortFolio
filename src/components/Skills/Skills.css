@@ -76,3 +76,83 @@
   color: var(--grey-color);
   margin-top: -5px;
 }
+
+/* ------------------------------- */
+/*        Responsive Design        */
+/* ------------------------------- */
+
+@media (max-width: 1085px) {
+  .skill-item {
+    max-width: 275px;
+    height: 75px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-content {
+    width: 95%;
+  }
+  .skills-content-items {
+    gap: 15px;
+  }
+  .skill-item {
+    max-width: 250px;
+    height: 70px;
+    padding: 10px 15px;
+    gap: 15px;
+  }
+  .item-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .expedu-sections {
+    width: 95%;
+  }
+  .skill-item {
+    max-width: 225px;
+    height: 65px;
+    padding: 7.5px 12.5px;
+    gap: 12px;
+  }
+  .item-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .skill-item {
+    max-width: 210px;
+    height: 60px;
+    padding: 5px 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .skill-item {
+    min-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: auto;
+    position: relative;
+    margin: 15px 5px;
+  }
+  .item-title {
+    position: absolute;
+    top: 65px;
+  }
+  .item-title span {
+    display: none;
+  }
+}

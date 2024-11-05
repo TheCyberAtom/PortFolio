@@ -193,3 +193,38 @@
     transparent 100%
   );
 }
+
+/* ------------------------------- */
+/*        Responsive Design        */
+/* ------------------------------- */
+
+@media (max-width: 768px) {
+  .contact-content {
+    width: 95%;
+    padding: 15px 30px;
+  }
+  .contact-content-left {
+    display: none;
+  }
+  .contact-content-right {
+    width: 100%;
+    padding: 20px;
+  }
+  .send-btn {
+    padding: 8px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-content {
+    width: 95%;
+    padding: 10px 10px;
+  }
+  .contact-content-right {
+    width: 100%;
+    padding: 20px;
+  }
+  .send-btn {
+    padding: 8px 25px;
+  }
+}

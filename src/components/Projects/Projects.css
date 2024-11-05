@@ -159,3 +159,75 @@
 .view-btn:hover .live-icon {
   color: var(--primary-color);
 }
+
+/* ------------------------------- */
+/*        Responsive Design        */
+/* ------------------------------- */
+
+@media (max-width: 1024px) {
+  .projects-content-items {
+    width: 90%;
+    display: grid;
+    gap: 15px;
+  }
+  .project-stacks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 0px;
+  }
+  .tech-stack {
+    padding: 5px 7px;
+    min-width: 75px;
+  }
+  .project-btns a {
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-content-items {
+    width: 95%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .project-stacks {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+  }
+  .tech-stack {
+    padding: 8px 10px;
+    min-width: 100px;
+  }
+  .project-btns a {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-content-items {
+    gap: 10px;
+  }
+  .project-stacks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 0px;
+  }
+  .tech-stack {
+    padding: 5px 7px;
+    min-width: 75px;
+  }
+  .project-btns a {
+    padding: 10px;
+  }
+}

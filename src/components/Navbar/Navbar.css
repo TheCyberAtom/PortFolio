@@ -35,12 +35,12 @@
 }
 
 .navbar-item p:hover {
-  color: var(--grey-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
 
 .navbar-item .icon:hover {
-  color: var(--grey-color);
+  color: var(--primary-color);
   cursor: pointer;
 }
 

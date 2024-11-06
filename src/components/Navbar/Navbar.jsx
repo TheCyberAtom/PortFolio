@@ -41,24 +41,34 @@ const Navbar = () => {
       >
         <ul className="navbar-items">
           <li className="navbar-item">
-            <HomeIcon className="icon" />
-            <p>Home</p>
+            <a href="#home">
+              <HomeIcon className="icon" />
+              <p>Home</p>
+            </a>
           </li>
           <li className="navbar-item">
-            <PersonIcon className="icon" />
-            <p>About</p>
+            <a href="#skills">
+              <PersonIcon className="icon" />
+              <p>About</p>
+            </a>
           </li>
           <li className="navbar-item">
-            <BusinessCenterIcon className="icon" />
-            <p>Experience</p>
+            <a href="#expedu">
+              <BusinessCenterIcon className="icon" />
+              <p>Experience</p>
+            </a>
           </li>
           <li className="navbar-item">
-            <LaptopMacIcon className="icon" />
-            <p>Projects</p>
+            <a href="#projects">
+              <LaptopMacIcon className="icon" />
+              <p>Projects</p>
+            </a>
           </li>
           <li className="navbar-item">
-            <PermPhoneMsgIcon className="icon" />
-            <p>Contact</p>
+            <a href="#contact">
+              <PermPhoneMsgIcon className="icon" />
+              <p>Contact</p>
+            </a>
           </li>
         </ul>
       </motion.div>

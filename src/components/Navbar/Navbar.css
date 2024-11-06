@@ -30,6 +30,10 @@
   gap: 5px;
 }
 
+.navbar-item a {
+  z-index: 9;
+}
+
 .navbar-item p {
   font-size: var(--font-size-m);
 }

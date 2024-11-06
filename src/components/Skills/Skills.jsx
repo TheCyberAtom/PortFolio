@@ -1,7 +1,7 @@
 import React from "react";
 import skillsData from "../../constants/skillConstant";
 import { motion } from "framer-motion";
-import "./skills.css";
+import "./Skills.css";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {

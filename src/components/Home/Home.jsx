@@ -5,7 +5,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import EmailIcon from "@mui/icons-material/Email";
 import { motion } from "framer-motion";
-import "./home.css";
+import "./Home.css";
 
 const Home = () => {
   const titleText = "Web Developer";

@@ -51,8 +51,10 @@ const Home = () => {
           </a>
           <a
             className="secondary-button"
-            href="../../assets/Resume_Portfolio.pdf"
-            download
+            href="/Resume_Portfolio.pdf"
+            target="_blank"
+            aria-label="Resume"
+            rel="noopener noreferrer"
           >
             Download Resume <FileDownloadIcon className="btn-icon" />
           </a>

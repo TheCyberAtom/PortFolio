@@ -95,6 +95,11 @@
   justify-content: center;
 }
 
+.social-icon.gmail-icon {
+  width: 33px;
+  height: 33px;
+}
+
 .social-icon.github-icon {
   width: 30px;
   height: 30px;
@@ -109,9 +114,9 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: -210%;
+  left: -140%;
   height: 1px;
-  width: 150px;
+  width: 125px;
   background-color: var(--primary-color);
   opacity: 0.2;
 }
@@ -119,9 +124,9 @@
   content: "";
   position: absolute;
   top: 48%;
-  right: -206%;
+  right: -136%;
   height: 1px;
-  width: 150px;
+  width: 125px;
   background-color: var(--primary-color);
   opacity: 0.2;
 }

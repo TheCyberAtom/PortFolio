@@ -3,6 +3,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import EmailIcon from "@mui/icons-material/Email";
 import { motion } from "framer-motion";
 import "./home.css";
 
@@ -45,14 +46,30 @@ const Home = () => {
           </div>
         </div>
         <div className="home-content-buttons">
-          <a href="#" className="primary-button">
+          <a href="#projects" className="primary-button">
             See My Projects <ChevronRightIcon className="btn-icon" />
           </a>
-          <a href="#" className="secondary-button">
+          <a
+            className="secondary-button"
+            href="../../assets/Resume_Portfolio.pdf"
+            download
+          >
             Download Resume <FileDownloadIcon className="btn-icon" />
           </a>
         </div>
         <div className="home-content-links">
+          <motion.a
+            className="gmail"
+            href="mailto:rkm.rahulkmishra@gmail.com"
+            aria-label="Email"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 150 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <EmailIcon className="gmail-icon social-icon" />
+          </motion.a>
           <motion.a
             className="github"
             href="https://github.com/TheCyberAtom"

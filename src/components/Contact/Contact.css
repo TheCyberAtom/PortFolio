@@ -171,6 +171,19 @@
   font-size: var(--font-size-s);
 }
 
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #4caf50; /* Success color */
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 1000;
+}
+
 /* Grid mask */
 
 .grid-mask {

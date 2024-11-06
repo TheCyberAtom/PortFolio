@@ -31,14 +31,16 @@ const Contact = () => {
         .send(serviceId, templateId, templateParams, userId)
         .then((response) => {
           if (response.status === 200) {
-            setName("");
-            setEmail("");
-            setMessage("");
             setEmailSent(true);
             setTimeout(() => {
               setEmailSent(false);
             }, 10000);
+          } else {
+            alert("Failed to send Email!");
           }
+          setName("");
+          setEmail("");
+          setMessage("");
           console.log("response", response);
         })
         .then((error) => console.log(error));
@@ -132,6 +134,7 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 id="email"
+                required
               />
             </div>
             <div className="message-group input-group">
@@ -145,6 +148,7 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 rows="4"
+                required
               ></textarea>
             </div>
             <button

@@ -15,6 +15,8 @@ const projectsData = [
       "MongoDB",
     ],
     image: TasteTroopImg,
+    github: "https://github.com/TheCyberAtom/TasteTroop",
+    website: "https://tastetroop.onrender.com/",
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ const projectsData = [
     description: "A personal portfolio to showcase my projects and skills.",
     techStack: ["JavaScript", "React", "CSS", "GSAP", "Netlify"],
     image: PortfolioImg,
+    github: "https://github.com/TheCyberAtom/My-PortFolio",
+    website: "https://thecyberatom-v1.netlify.app/",
   },
 ];
 

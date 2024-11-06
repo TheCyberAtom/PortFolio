@@ -34,10 +34,20 @@ const ProjectCard = ({ item }) => {
             })}
           </div>
           <div className="project-btns">
-            <a href="#" className="code-btn">
+            <a
+              href={item.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="code-btn"
+            >
               <CodeIcon className="code-icon" />
             </a>
-            <a href="#" className="view-btn">
+            <a
+              href={item.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="view-btn"
+            >
               <LanguageIcon className="live-icon" />
             </a>
           </div>

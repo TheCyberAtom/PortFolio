@@ -1,5 +1,4 @@
 import React from "react";
-import { experienceData } from "../../constants/expConstant";
 import "./ExpEdu.css";
 import { userData } from "../../constants/userData";
 

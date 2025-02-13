@@ -6,6 +6,7 @@ import WavingHandIcon from "@mui/icons-material/WavingHand";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import { motion } from "framer-motion";
 import "./Contact.css";
+import { userData } from "../../constants/userData";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -66,36 +67,37 @@ const Contact = () => {
         >
           <div className="left-details">
             <h2>
-              <WavingHandIcon className="hello-icon" /> Hi There,
+              <WavingHandIcon className="hello-icon" />{" "}
+              {userData.contactData.salutation},
             </h2>
-            <h2>Let's code your vision together.</h2>
+            <h2>{userData.contactData.subTitle}</h2>
           </div>
           <div className="left-email">
             <EmailIcon sx={{ fontSize: "2.5em" }} className="email-icon" />
             <div className="email-text">
-              <p>Mail me at</p>
-              <a href="mailto:rkm.rahulkmishra@gmail.com">
-                rkm.rahulkmishra@gmail.com
+              <p>{userData.contactData.emailDesc}</p>
+              <a href={"mailto:" + userData.socials.email}>
+                {userData.socials.email}
               </a>
             </div>
           </div>
           <div className="left-socials">
             <p>Socials : </p>
             <a
-              href="https://www.linkedin.com/in/thecyberatom/"
+              href={userData.socials.linkedin}
               aria-label="github profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Linkedin
+              {userData.contactData.linkedin}
             </a>
             <a
-              href="https://github.com/TheCyberAtom"
+              href={userData.socials.github}
               aria-label="github profile"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              {userData.contactData.github}
             </a>
           </div>
         </motion.div>
@@ -106,7 +108,7 @@ const Contact = () => {
           transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
         >
           <div className="title">
-            <h2>Send me a message</h2>
+            <h2>{userData.contactData.title}</h2>
             <RocketLaunchIcon className="rocket-icon" />
           </div>
           <form onSubmit={submitForm}>

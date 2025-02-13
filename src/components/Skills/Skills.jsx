@@ -1,8 +1,8 @@
 import React from "react";
-import skillsData from "../../constants/skillConstant";
 import { motion } from "framer-motion";
 import "./Skills.css";
 import SkillCard from "./SkillCard";
+import { userData } from "../../constants/userData";
 
 const Skills = () => {
   return (
@@ -15,7 +15,7 @@ const Skills = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <h2 className="section-title">My Tech Stack</h2>
+          <h2 className="section-title">{userData.skillsData.title}</h2>
         </motion.div>
         <motion.div
           className="skills-content-description"
@@ -24,10 +24,7 @@ const Skills = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <p className="section-desc">
-            I'm proficient in a range of modern technologies that empower me to
-            build highly functional solutions.
-          </p>
+          <p className="section-desc">{userData.skillsData.desc}</p>
         </motion.div>
         <motion.div
           className="skills-content-items"
@@ -36,7 +33,7 @@ const Skills = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          {skillsData.map((item) => {
+          {userData.skillsData?.technologies?.map((item) => {
             return <SkillCard item={item} key={item.id} />;
           })}
         </motion.div>

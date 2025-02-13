@@ -1,5 +1,5 @@
 import React from "react";
-import projectsData from "../../constants/projectConstant";
+import { userData } from "../../constants/userData";
 import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 import "./Projects.css";
@@ -15,7 +15,7 @@ const Projects = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <h1 className="section-title">Personal Projects</h1>
+          <h1 className="section-title">{userData.projectsData.title}</h1>
         </motion.div>
         <motion.div
           className="projects-content-description"
@@ -24,10 +24,10 @@ const Projects = () => {
           //   viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className="section-desc">Code-Powered Designs in Action</p>
+          <p className="section-desc">{userData.projectsData.desc}</p>
         </motion.div>
         <div className="projects-content-items">
-          {projectsData.map((item) => {
+          {userData?.projectsData?.projects.map((item) => {
             return <ProjectCard key={item.id} item={item} />;
           })}
         </div>

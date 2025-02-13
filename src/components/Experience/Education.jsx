@@ -1,11 +1,11 @@
 import React from "react";
-import { educationData } from "../../constants/eduConstant";
+import { userData } from "../../constants/userData";
 import "./ExpEdu.css";
 
 const Education = () => {
   return (
     <div className="education" id="education">
-      {educationData.map((eduItem, index) => {
+      {userData.experienceData?.edu?.map((eduItem, index) => {
         return (
           <div key={index} className="education-item">
             <img className="college-logo" src={eduItem.image} alt="TCS" />

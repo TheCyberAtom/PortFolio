@@ -1,11 +1,12 @@
 import React from "react";
 import { experienceData } from "../../constants/expConstant";
 import "./ExpEdu.css";
+import { userData } from "../../constants/userData";
 
 const Experience = () => {
   return (
     <div className="experience" id="experience">
-      {experienceData.map((expItem, index) => {
+      {userData.experienceData?.exp?.map((expItem, index) => {
         return (
           <div key={index} className="experience-item">
             <img className="company-logo" src={expItem.image} alt="TCS" />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { userData } from "../../constants/userData";
 import Experience from "./Experience";
 import Education from "./Education";
 import "./ExpEdu.css";
@@ -9,13 +10,10 @@ const ExpEdu = () => {
     <div className="expedu" id="expedu">
       <div className="expedu-content">
         <div className="expedu-content-title">
-          <h2 className="section-title">Experience</h2>
+          <h2 className="section-title">{userData.experienceData.title}</h2>
         </div>
         <div className="expedu-content-description">
-          <p className="section-desc">
-            A glimpse into my academic and profesional experience, shaping my
-            growth in the tech world.
-          </p>
+          <p className="section-desc">{userData.experienceData.desc}</p>
         </div>
         <div className="expedu-sections">
           <div className="tabs">

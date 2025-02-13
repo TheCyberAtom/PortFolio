@@ -5,11 +5,11 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import EmailIcon from "@mui/icons-material/Email";
 import { motion } from "framer-motion";
+import { userData } from "../../constants/userData";
 import "./Home.css";
 
 const Home = () => {
-  const titleText = "Web Developer";
-  const letters = titleText.split("");
+  const letters = userData.role.split("");
 
   return (
     <div className="home" id="home">
@@ -22,7 +22,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 5, ease: "easeOut" }}
             >
-              Based In Delhi, India
+              Based In {userData.location.toUpperCase()}
             </motion.p>
           </div>
           <div className="title">
@@ -39,10 +39,7 @@ const Home = () => {
             ))}
           </div>
           <div className="sub-title">
-            <p>
-              Hi, I'm Rahul Mishra. A dedicated frontend professional exploring
-              backend technologies to build robust, full-stack websites.
-            </p>
+            <p>{userData.role_desc}</p>
           </div>
         </div>
         <div className="home-content-buttons">

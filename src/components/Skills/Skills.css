@@ -34,7 +34,7 @@
 
 .skill-item {
   background-color: var(--background-color-2);
-  border: 1px solid transparent;
+  border: 1px solid var(--secondary-color);
   border-radius: 10px;
   width: 100%;
   max-width: 300px;

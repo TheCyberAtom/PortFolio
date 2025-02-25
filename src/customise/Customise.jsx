@@ -1,55 +1,49 @@
 import React, { useState, useEffect } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import EditOffIcon from "@mui/icons-material/EditOff";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import "./Customise.css";
 import CustomOptions from "./CustomOptions";
 
 const Customise = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false); // State to track if screen is mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
 
-  // Use useEffect to track screen width
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 769); // Set isMobile based on window width
+      setIsMobile(window.innerWidth < 769);
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Check initial window size
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="customise" id="customise">
-      <motion.div
-        className="customise-content"
-        initial={{ width: "60px", minWidth: "60px", height: "60px" }}
-        animate={{
-          width: isOpen ? (isMobile ? "auto" : "auto") : "60px",
-          height: isOpen && isMobile ? "auto" : "60px",
-          minWidth: "60px",
-          minHeight: "60px",
-        }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-      >
-        <div
-          className={isOpen ? "edit-button open" : "edit-button close"}
-          onClick={() => setIsOpen((prev) => !prev)}
-        >
-          {isOpen ? (
-            <EditOffIcon className="icon" />
-          ) : (
-            <EditIcon className="icon" />
-          )}
-        </div>
+    <>
+      {/* Edit Button */}
+      <div className="edit-button" onClick={() => setIsOpen((prev) => !prev)}>
+        {isOpen ? (
+          <EditOffIcon className="icon" />
+        ) : (
+          <EditIcon className="icon" />
+        )}
+      </div>
 
-        {isOpen && <CustomOptions />}
-      </motion.div>
-    </div>
+      {/* Customization Panel */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="customise-content"
+            initial={{ opacity: 0, y: 200, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: 200, x: "-50%" }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+          >
+            <CustomOptions />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

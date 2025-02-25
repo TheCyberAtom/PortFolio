@@ -238,22 +238,28 @@ const CustomOptions = () => {
           }
         />
       </div>
+      {/* Toggle Light/Dark Theme */}
       <button
         className="color-option dark-light"
+        data-tooltip="Toggle Light/Dark Theme"
         style={{ color: complementaryBackgroundColor }}
         onClick={toggleTheme}
       >
         {themeIcon}
       </button>
+      {/* Random Theme Button */}
       <button
         className="color-option random-theme"
+        data-tooltip="Random Theme"
         style={{ color: complementaryBackgroundColor }}
         onClick={randomTheme}
       >
         <ShuffleIcon className="theme-icon" />
       </button>
+      {/* Reset Theme Button */}
       <button
         className="color-option reset-theme"
+        data-tooltip="Reset Theme"
         style={{ color: complementaryBackgroundColor }}
         onClick={resetTheme}
       >

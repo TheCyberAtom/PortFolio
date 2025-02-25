@@ -75,6 +75,33 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Tooltip styles */
+.color-option[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+.color-option[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.color-option[data-tooltip]:hover::after {
+  opacity: 1;
+}
+
 .color-option label {
   position: absolute;
   top: 50%;
